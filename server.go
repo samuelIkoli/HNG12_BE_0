@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 	"time"
 
@@ -11,6 +12,14 @@ import (
 
 
 func main(){
+
+	c := cron.New()
+	c.AddFunc("*/10 * * * *", func() {
+		fmt.Println("Cronning")
+		http.Get("https://hng12-be-0.onrender.com/")
+
+	})
+	c.Start()
 	server:= gin.Default()
 
 	server.GET("/", func(ctx *gin.Context){
@@ -45,12 +54,6 @@ func main(){
 		ctx.JSON(200, gin.H{
 			"message": "HNG 12 - 2025, Mark Essien rocks :-)",
 		})
-	})
-
-	c := cron.New()
-	c.AddFunc("*/1 * * * *", func() {
-		http.Get("https://hng12-be-0.onrender.com/")
-
 	})
 
 	server.Run(":8080")

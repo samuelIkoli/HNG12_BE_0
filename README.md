@@ -49,10 +49,24 @@ Online API testing tools such as **Postman** and **Thunderclient** can be used t
 
 ## 📖 Documentation
 
-Endpoint
+## Endpoints
+
+
+- **URL**: `/task`
+- **Method**: `GET`
+- **Response**:
+  ```json
+  {
+  "email": "myemail@gmail.com",
+  "current_datetime": "",
+  "github_url": "user_id"
+    }
+  ```
+
+
 
 ## 🔗 Link(s)
 
-- [You can interact with the project here](reactauth-iota.vercel.app)
+- [You can interact with the project here](https://hng12-be-0.onrender.com/)
 
 Built by SAMUEL IKOLI

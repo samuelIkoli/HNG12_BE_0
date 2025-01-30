@@ -44,6 +44,6 @@ func main(){
 			"message": "HNG 12 - 2025, Mark Essien rocks :-)",
 		})
 	})
-	server.Run()
+	server.Run(":8080")
 
 }

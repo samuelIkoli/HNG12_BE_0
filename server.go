@@ -1,9 +1,11 @@
 package main
 
 import (
+	"net/http"
 	"time"
 
 	"github.com/gin-gonic/gin"
+	"github.com/robfig/cron"
 	"github.com/samuelIkoli/HNG12_BE_0/entity"
 )
 
@@ -44,6 +46,13 @@ func main(){
 			"message": "HNG 12 - 2025, Mark Essien rocks :-)",
 		})
 	})
+
+	c := cron.New()
+	c.AddFunc("*/1 * * * *", func() {
+		http.Get("https://hng12-be-0.onrender.com/")
+
+	})
+
 	server.Run(":8080")
 
 }

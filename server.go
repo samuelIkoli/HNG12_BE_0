@@ -14,7 +14,7 @@ import (
 func main(){
 
 	c := cron.New()
-	c.AddFunc("*/10 * * * *", func() {
+	c.AddFunc("*/500 * * * *", func() {
 		fmt.Println("Cronning")
 		http.Get("https://hng12-be-0.onrender.com/")
 

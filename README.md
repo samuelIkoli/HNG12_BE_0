@@ -5,7 +5,7 @@ HNG stage 0 task with goLang. Simple endpoint to return my email address, the cu
 
 The project is divided into:
 
-- Controllers: found in `/controller` folder. The functions that get executed when the endpoints are called is defined here.
+- Handlers: found in `/handlers` folder. The functions that get executed when the endpoints are called is defined here.
 
 - Routes: found in `/routes` directory. URL endpoints and their corresponding method/action.
 
@@ -67,6 +67,6 @@ Online API testing tools such as **Postman** and **Thunderclient** can be used t
 
 ## 🔗 Link(s)
 
-- [You can interact with the project here](https://hng12-be-0.onrender.com/)
-
+- [You can interact with the project here](https://hng12-be-0.onrender.com/task)
+- [Backlink] (https://hng.tech/hire/golang-developers)
 Built by SAMUEL IKOLI
